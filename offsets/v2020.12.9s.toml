@@ -1,0 +1,152 @@
+# Offset from a class's address to its static fields
+# e.g. [AmongUsClient.Addr, static, AmongUsClient.Instance, AmongUsClient.GameState]
+static = 0x5C
+
+[AmongUsClient]
+obfuscated = "FMLLKEACGIO"
+addr = 29720404
+
+[AmongUsClient.static]
+Instance = [0, "AmongUsClient"]
+
+[AmongUsClient.fields]
+GameState = [0x64, "GameStates"]
+GameMode = [0x74, "GameModes"]
+
+[GameModes]
+type = "uint8"
+obfuscated = "HMHDLKDABIP"
+
+[GameModes.items]
+LocalGame = 0
+OnlineGame = 1
+FreePlay = 2
+
+[GameStates]
+obfuscated = "KGEKNMMAKKN"
+type = "uint8"
+
+[GameStates.items]
+NotJoined = 0
+Joined = 1
+Started = 2
+Ended = 3
+
+[GameData]
+obfuscated = "EGLJNOMOGNP"
+addr = 29719528
+
+[GameData.static]
+Instance = [0, "GameData"]
+
+[GameData.fields]
+AllPlayers = [0x24, "List"]
+TotalTasks = [0x28, "int32"]
+CompletedTasks = [0x28, "int32"]
+
+
+[PlayerInfo]
+obfuscated = "EGLJNOMOGNP.DCJMABDDJCF"
+
+[PlayerInfo.fields]
+PlayerId = [0x8, "uint8"]
+PlayerName = [0xC, "string"]
+ColorId = [0x10, "uint32"]
+HatId = [0x14, "uint32"]
+PetId = [0x18, "uint32"]
+SkinId = [0x1C, "uint32"]
+Disconnected = [0x20, "bool"]
+IsImpostor = [0x28, "bool"]
+IsDead = [0x29, "bool"]
+_object = [0x2C, "PlayerControl"]
+
+[PlayerControl]
+obfuscated = "FFGALNAPKCD"
+addr = 29720444
+
+[PlayerControl.static]
+LocalPlayer = [0x0, "PlayerControl"]
+
+[PlayerControl.fields]
+PlayerId = [0x28, "uint8"]
+inVent = [0x31, "bool"]
+_cachedData = [0x34, "PlayerInfo"]
+nameText = [0x4C, "TextRenderer"]
+
+[TextRenderer]
+obfuscated = "AELDHKGBIFD"
+
+[TextRenderer.fields]
+Text = [0x28, "string"]
+Color = [0x30, "Color"]
+OutlineColor = [0x50, "Color"]
+
+[MeetingHud]
+obfuscated = "OOCJALPKPEP"
+addr = 29717412
+
+[MeetingHud.static]
+Instance = [0x0, "MeetingHud"]
+
+[MeetingHud.fields]
+TitleText = [0x28, "TextRenderer"]
+playerStates = [0x60, "array"]
+state = [0x84, "VoteStates"]
+exiledPlayer = [0x94, "PlayerInfo"]
+wasTie = [0x98, "bool"]
+discussionTimer = [0xA0, "float32"]
+reporterId = [0xA4, "uint8"]
+amDead = [0xA5, "bool"]
+
+[VoteStates]
+type = "uint8"
+obfuscated = "OOCJALPKPEP.BAMDJGFKOFP"
+
+[VoteStates.items]
+Discussion = 0
+NotVoted = 1
+Voted = 2
+Results = 3
+Proceeding = 4
+
+[PlayerVoteArea]
+obfuscated = "HDJGDMFCHDN"
+
+[PlayerVoteArea.fields]
+TargetPlayerId = [0x10, "int8"]
+NameText = [0x2C, "TextRenderer"]
+didVote = [0x31, "bool"]
+didReport = [0x32, "bool"]
+votedFor = [0x33, "int8"]
+
+[IntroCutscene]
+obfuscated = "PENEIDJGGAF"
+addr = 29715944
+
+[IntroCutscene.fields]
+Title = [0xc, "TextRenderer"]
+ImpostorText = [0x10, "TextRenderer"]
+BackgroundBar = [0x18, "ptr"]
+
+[Palette]
+obfuscated = "LOCPGOACAJF"
+addr = 29720516
+
+[Palette.static]
+DisabledGrey  = [0x0, "Color"]
+DisabledColor = [0x10, "Color"]
+EnabledColor= [0x20, "Color"]
+Black= [0x30, "Color"]
+ClearWhite= [0x50, "Color"]
+HalfWhite= [0x60, "Color"]
+White= [0x70, "Color"]
+LightBlue= [0x80, "Color"]
+LightBlueOrange= [0x90, "Color"]
+Purple= [0xA0, "Color"]
+Brown= [0xB0, "Color"]
+CrewmateBlue= [0xC0, "Color"]
+ImpostorRed= [0xD0, "Color"]
+ShortColorNames= [0xE0, "string"]
+
+[VersionShower]
+obfuscated = "ELDIDNABIPI"
